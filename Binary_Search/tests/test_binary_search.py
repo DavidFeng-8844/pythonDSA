@@ -1,6 +1,5 @@
-import time
 import pytest
-import Binary_Search.source.linear_search as linear_search
+import Binary_Search.source.binary_search as binary_search
 
 # create a test case for the false linear search algorithm
 tests = [{'input': {'cards': [13, 11, 10, 7, 4, 3, 1, 0], 'query': 7}, 'output': 3},
@@ -18,6 +17,13 @@ tests = [{'input': {'cards': [13, 11, 10, 7, 4, 3, 1, 0], 'query': 7}, 'output':
 
 
 @pytest.mark.parametrize("test_cases", tests)
-def test_linear_search_one(test_cases):
-    result = linear_search.linear_search(**test_cases["input"])
+def test_binary_search_one(test_cases):
+    result = binary_search.binary_search(**test_cases["input"])
+    assert result == test_cases["output"]
+
+
+# create a parametrized test for the general binary search algorithm
+@pytest.mark.parametrize("test_cases", tests)
+def test_general_binary_search(test_cases):
+    result = binary_search.general_nested_binary_search(**test_cases["input"])
     assert result == test_cases["output"]

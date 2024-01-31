@@ -54,4 +54,5 @@ def general_nested_binary_search(**pair):
             return "left"
         else:
             return "right"
+
     return general_binary_search(0, len(pair["cards"]) - 1, condition)

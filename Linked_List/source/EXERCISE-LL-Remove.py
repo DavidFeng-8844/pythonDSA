@@ -95,12 +95,8 @@ class LinkedList:
         self.length += 1   
         return True  
 
-    ## WRITE REMOVE METHOD HERE ##
-    #                            #
-    #                            #
-    #                            #
-    #                            #
-    ##############################
+
+
   
 
 
